@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Sign Up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+    <!--"C:\Users\amand\Documents\workspace-spring-tool-suite-4-4.21.1.RELEASE\firstProject-1\src\main\resources\templates\css\style.css"-->
+
+</head>
+
+<body class="img js-fullheight" style="background-image: url(images/bg.jpg);">
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Success Message-->
+               <!-- <div th:if="${param:success}">
+                    <div class="alert alert-info">You've Successfully Registered to Our Awesome App!</div>
+                </div>-->
+
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">Sign Up</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-7 col-lg-5">
+                    <div class="login-wrap">
+                        <h3 class="text-center mb-4">Create Your Account</h3>
+						<form id="signup-form" action="/customersignup" method="post">
+        <div class="form-group">
+            <input type="text" id="username" class="form-control" placeholder="Full Name" required name="username">
+        </div>
+        <div class="form-group">
+            <input type="text" id="email" class="form-control" placeholder="Email Address" required name="email">
+        </div>
+        <div class="form-group">
+            <input id="password" type="password" class="form-control" placeholder="Password" required name="password">
+            <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+        </div>
+        <div class="form-group">
+            <input id="cpassword" type="password" class="form-control" placeholder="Confirm Password" required name="cpassword">
+            <span toggle="#cpassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="form-control btn btn-primary submit px-3">Sign up</button>
+        </div>
+    </form>
+                        <!--<p class="w-100 text-center">&mdash; I'm already a member! <a data-toggle="tab" href="/login" th:href="@{/login}">Sign In</a> &mdash;</p>
+                    --></div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <script th:src="@{js/jquery.min.js}"></script>
+<script th:src="@{js/bootstrap.min.js}"></script>
+<script th:src="@{js/signup.js}"></script>
+
+</body>
+
+</html>
